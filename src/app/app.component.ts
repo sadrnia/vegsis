@@ -42,11 +42,18 @@ export class MyApp {
     { title: 'Master Detail', component: 'ListMasterPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },
+    { title: 'Category', component: 'CategoryPage' },
     { title: 'Search', component: 'SearchPage' }
   ]
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
     platform.ready().then(() => {
+      platform.setDir('rtl', true);
+      window.open()
+      if ((<any>window).cordova && (<any>window).cordova.InAppBrowser) {
+        window.open = (<any>window).cordova.InAppBrowser.open;
+      }
+
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
