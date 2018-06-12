@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>{{ item.name }}</ion-title>
+    <ion-title>{{ item.name }} {{item.person}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -11,14 +11,77 @@
   <ion-card>
     <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
     </div>
-
+    <ion-card class="time">
+      <ion-icon name="ios-alarm-outline">
+      </ion-icon>
+      <p>{{item.time}} {{item.person}}</p>
+    </ion-card>
     <div class="item-detail" padding>
       <h2>{{item.name}}</h2>
       <p>{{item.about}}</p>
-      <p>{{item.time}}</p>
-      <p>{{item.person}}</p>
-      <p>{{item.ingredients}}</p>
-      <p>{{item.makeit}}</p>
     </div>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="kittens">
+        مواد لازم
+      </ion-segment-button>
+      <ion-segment-button value="puppies">
+        طرز تهیه
+      </ion-segment-button>
+    </ion-segment>
+
+    <div [ngSwitch]="pet">
+      <ion-list *ngSwitchCase="'puppies'">
+        <ion-item>
+         <!-- <ion-thumbnail item-start>
+            <img src="img/thumbnail-puppy-1.jpg">
+          </ion-thumbnail>-->
+          <p>{{item.ingredients}}</p>
+          <p>{{item.makeit1}}</p>
+          <p>{{item.makeit2}}</p>
+          <p>{{item.makeit3}}</p>
+          <p>{{item.makeit4}}</p>
+          <p>{{item.makeit5}}</p>
+          <p>{{item.makeit6}}</p>
+          <p>{{item.makeit7}}</p>
+          <p>{{item.makeit8}}</p>
+          <p>{{item.makeit9}}</p>
+          <p>{{item.makeit10}}</p>
+          <p>{{item.makeit11}}</p>
+          <p>{{item.makeit12}}</p>
+          <p>{{item.makeit13}}</p>
+          <p>{{item.makeit14}}</p>
+          <p>{{item.makeit15}}</p>
+        </ion-item>
+        ...
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'kittens'">
+        <ion-item>
+          <!--<ion-thumbnail item-start>
+            <img src="img/thumbnail-kitten-1.jpg">
+          </ion-thumbnail>-->
+          <h2>
+            <p>{{item.ing1}}</p>
+            <p>{{item.ing2}}</p>
+            <p>{{item.ing3}}</p>
+            <p>{{item.ing4}}</p>
+            <p>{{item.ing5}}</p>
+            <p>{{item.ing6}}</p>
+            <p>{{item.ing7}}</p>
+            <p>{{item.ing8}}</p>
+            <p>{{item.ing9}}</p>
+            <p>{{item.ing10}}</p>
+            <p>{{item.ing11}}</p>
+            <p>{{item.ing12}}</p>
+            <p>{{item.ing13}}</p>
+            <p>{{item.ing14}}</p>
+            <p>{{item.ing15}}</p>
+          </h2>
+        </ion-item>
+        ...
+      </ion-list>
+    </div>
+
+
   </ion-card>
 </ion-content>

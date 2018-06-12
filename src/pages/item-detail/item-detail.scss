@@ -14,4 +14,21 @@ page-item-detail {
     width: 100%;
     background: white;
   }
+  .time{
+    border-radius: 50px;
+    height: 55px;
+    background-color: #ffa502;
+    margin-top: -30px;
+  }
+  .time  ion-icon{
+    padding-right: 30px;
+    padding-top: 12px;
+    font-size: 30px;
+    color: #fff;
+  }
+  .time p{
+    padding-right: 70px;
+    color: white;
+    margin-top: -24px;
+  }
 }
