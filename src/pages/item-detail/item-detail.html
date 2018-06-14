@@ -3,10 +3,7 @@
   <ion-navbar color="primary">
     <ion-title>{{ item.name }} {{item.person}}</ion-title>
   </ion-navbar>
-
 </ion-header>
-
-
 <ion-content class="bg-color">
   <ion-card>
     <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
@@ -36,27 +33,33 @@
             <img src="img/thumbnail-puppy-1.jpg">
           </ion-thumbnail>-->
           <p>{{item.ingredients}}</p>
-          <p>{{item.makeit1}}</p>
-          <p>{{item.makeit2}}</p>
-          <p>{{item.makeit3}}</p>
-          <p>{{item.makeit4}}</p>
-          <p>{{item.makeit5}}</p>
-          <p>{{item.makeit6}}</p>
-          <p>{{item.makeit7}}</p>
-          <p>{{item.makeit8}}</p>
-          <p>{{item.makeit9}}</p>
-          <p>{{item.makeit10}}</p>
-          <p>{{item.makeit11}}</p>
-          <p>{{item.makeit12}}</p>
-          <p>{{item.makeit13}}</p>
-          <p>{{item.makeit14}}</p>
-          <p>{{item.makeit15}}</p>
+            <ion-label text-wrap>{{item.makeit1}}</ion-label>
+            <ion-checkbox color="primary" checked="true"></ion-checkbox>
         </ion-item>
-        ...
+        <ion-item>
+          <ion-label text-wrap>{{item.makeit2}}</ion-label>
+          <ion-checkbox color="primary" checked="true"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label text-wrap>{{item.makeit3}}</ion-label>
+          <ion-checkbox color="primary" checked="true"></ion-checkbox>
+        </ion-item>
+          <p text-wrap>{{item.makeit4}}</p>
+          <p text-wrap>{{item.makeit5}}</p>
+          <p text-wrap>{{item.makeit6}}</p>
+          <p text-wrap>{{item.makeit7}}</p>
+          <p text-wrap>{{item.makeit8}}</p>
+          <p text-wrap>{{item.makeit9}}</p>
+          <p text-wrap>{{item.makeit10}}</p>
+          <p text-wrap>{{item.makeit11}}</p>
+          <p text-wrap>{{item.makeit12}}</p>
+          <p text-wrap>{{item.makeit13}}</p>
+          <p text-wrap>{{item.makeit14}}</p>
+          <p text-wrap>{{item.makeit15}}</p>
       </ion-list>
 
       <ion-list *ngSwitchCase="'kittens'">
-        <ion-item>
+        <ion-item text-wrap>
           <!--<ion-thumbnail item-start>
             <img src="img/thumbnail-kitten-1.jpg">
           </ion-thumbnail>-->
@@ -78,10 +81,8 @@
             <p>{{item.ing15}}</p>
           </h2>
         </ion-item>
-        ...
       </ion-list>
     </div>
-
-
+    <button class="done" ion-button color="secondary" full large>Done</button>
   </ion-card>
 </ion-content>
